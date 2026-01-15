@@ -1,4 +1,6 @@
 from __future__ import annotations
+
+
 class Distance:
     def __init__(self, km: int | float) -> None:
         self.km = km
@@ -26,7 +28,6 @@ class Distance:
 
     def __truediv__(self, other: int | float) -> Distance:
         return Distance(km=round(self.km / other, 2),)
-
 
     def __lt__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
